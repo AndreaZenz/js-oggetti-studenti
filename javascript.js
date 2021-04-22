@@ -24,26 +24,29 @@ var arrOggetti = [
     {
         nome: "mario",
         cognome: "verdi",
-        eta: "23"
-    }
+        eta: "19"
+    },
 ]
 
 // Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
 
-for (const key in arrOggetti) {
-    console.log(arrOggetti[key].nome)
-    console.log(arrOggetti[key].cognome)
+for (var i = 0; i < arrOggetti.length; i++ ) {
+    console.log(arrOggetti[i].nome)
+    console.log(arrOggetti[i].cognome)
 }
 
 
 // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+var nomeInserito = prompt("Inserisci il nome del nuovo studente")
+var cognomeInserito = prompt("Inserisci il cognome del nuovo studente")
+var etaInserita = prompt("Inserisci l'eta del nuovo studente")
 
 var nuovoStudente = {
-    novita1: [],
+    nome : nomeInserito,
+    cognome : cognomeInserito,
+    eta: etaInserita
 }
 
-for (var i = 0; i < 3; i++) {
-    var aggiunta = prompt("Aggiungi i dati del nuovo studente, inserendo prima il nome, poi il cognome ed infine l'eta")
-    nuovoStudente.novita1.push(aggiunta)
-}
-console.log(nuovoStudente)
+arrOggetti.push(nuovoStudente)
+
+console.log(arrOggetti)
